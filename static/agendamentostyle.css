@@ -1,0 +1,91 @@
+Body {
+ Font-family: Arial, sans-serif;
+ Margin: 0;
+ Padding: 0;
+ Background-color: #f9f9f9;
+ Color: #333;
+}
+Header {
+ Text-align: center;
+ Padding: 20px;
+ Background-color: #4CAF50;
+ Color: white;
+}
+.steps {
+ Display: flex;
+ Justify-content: center;
+ Gap: 20px;
+ Margin: 20px 0;
+}
+.step {
+ Padding: 10px 20px;
+ Border: 2px solid #4CAF50;
+ Border-radius: 10px;
+ Text-align: center;
+ Color: #4CAF50;
+ Font-weight: bold;
+}
+.step span {
+ Display: block;
+ Margin-top: 5px;
+ Font-size: 0.9em;
+}
+.form-agendamento {
+ Max-width: 600px;
+ Margin: 0 auto;
+ Background: white;
+ Padding: 20px;
+ Border-radius: 10px;
+ Box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-agendamento h2 {
+ Margin-bottom: 10px;
+ Color: #4CAF50;
+}
+.form-group {
+ Margin-bottom: 15px;
+}
+.form-group label {
+ Display: block;
+ Font-weight: bold;
+ Margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+ Width: 100%;
+ Padding: 10px;
+ Border: 1px solid #ccc;
+ Border-radius: 5px;
+ Font-size: 1em;
+}
+.form-group textarea {
+ Resize: vertical;
+}
+.form-buttons {
+ Display: flex;
+ Justify-content: space-between;
+}
+.btn {
+ Padding: 10px 20px;
+ Font-size: 1em;
+ Border: none;
+ Border-radius: 5px;
+ Cursor: pointer;
+}
+.btn-primary {
+ Background-color: #4CAF50;
+ Color: white;
+}
+.btn-secondary {
+ Background-color: #ccc;
+ Color: black;
+}
+Footer {
+ Text-align: center;
+ Padding: 10px;
+ Background-color: #4CAF50;
+ Color: white;
+ Margin-top: 20px;
+}
+#agendamento.j
