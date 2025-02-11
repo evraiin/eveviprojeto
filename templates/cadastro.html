@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>IFPB</title>
+     <link rel="stylesheet" href="../static/cadstyle.css">
+   </head>
+
+   <body>
+
+    <div class="container">
+
+     <header>
+
+        <div class="logo">
+          HV-ASA - IFPB
+          <img src="../static/logo.png">
+        </div>
+     </header>
+<main>
+        <div class="informacoes">
+            <form id="form" action="/cadastro" method="post">
+              <a><b>Cadastro:</b></a>
+              <br>
+              <label>Nome:</label><input type="text" name="nome" placeholder="Ex: Maria Vivian Rodrigues" required>
+              <br>
+              <label>Email:</label><input type="text" name="email" placeholder="Ex: seuemail@gmail.com" required>
+              <br>
+              <label>Senha:</label><input type="password" name="senha" placeholder="Sua senha" required>
+              <br>
+              <button onclick="entrar()" type="submit"> Cadastrar </button>
+              <p id="mensagem">{{mensagem}} </p>
+
+            </form>
+
+        </div>
+
+</main>
+
+   </div>
+
+     <script src="js/iscript.js"> </script>
+
+   </body>
+</html>

@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 40px;
+    border-bottom: 3px solid #84C225;
+}
+
+.logo h1 {
+    color: #2E7D32;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Ícones sociais */
+.social-icons img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content p {
+    color: gray;
+    font-size: 18px;
+}
+
+/* Centralizar o quadrado de informações */
+.informacoes-clinica {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    max-height: none;
+}
+
+.informacoes-clinica h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.informacoes-clinica p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    text-align: justify;
+}
+
+/* Para telas menores que 768px (celulares) */
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.beneficio {
+    max-width: 400px;
+    padding: 20px;
+}
+
+.beneficio img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.beneficio h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Novo banner antes do rodapé */
+.banner-footer {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.banner-footer img {
+    width: 100%;
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: #2E7D32;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Remove o background do banner principal */
+.banner,
+.banner-footer {
+    background: none;
+}
+
+/* Garante que os banners mantenham suas imagens próprias */
+.banner img,
+.banner-footer img {
+    width: 100%;
+    display: block;
+}
+
+/* Estilização do conteúdo para melhor contraste */
+.content {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content p {
+    color: gray;
+    font-size: 18px;
+}
+
+
+/* Estilo para o botão de login */
+.login-button {
+    position: absolute;  /* Posicionamento absoluto para posicionar no canto */
+    top: 20px;           /* Distância do topo */
+    right: 20px;         /* Distância da borda direita */
+}
+
+.login-button button {
+    padding: 10px 20px;  /* Espaciamento dentro do botão */
+    font-size: 16px;      /* Tamanho da fonte */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;         /* Cor do texto */
+    border: none;         /* Remover borda */
+    border-radius: 5px;   /* Bordas arredondadas */
+    cursor: pointer;      /* Cursor em forma de mãozinha ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave para a cor */
+}
+
+.login-button button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Ajuste para não cobrir o conteúdo */
+body {
+    padding-top: 80px; /* Garante que o conteúdo não fique escondido atrás do header */
+}
+
+/* Estilo para o container geral */
+.header-content {
+    display: flex;             /* Flexbox para alinhar ícones e botão na mesma linha */
+    justify-content: flex-end; /* Alinha todos os itens à direita */
+    align-items: center;       /* Alinha os itens verticalmente ao centro */
+    gap: 15px;                 /* Espaçamento pequeno entre os itens */
+    padding: 20px;             /* Padding para garantir algum espaçamento no container */
+}
+
+/* Estilo para os ícones das redes sociais */
+.sodivcial-icons {
+    display: flex;            /* Flexbox para alinhar os ícones horizontalmente */
+    gap: 15px;                /* Espaçamento entre os ícones */
+}
+
+.sodivcial-icons a img {
+    width: 30px;              /* Tamanho fixo dos ícones */
+    height: 30px;             /* Tamanho fixo dos ícones */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito de hover para os ícones das redes sociais */
+.sodivcial-icons a:hover img {
+    transform: scale(1.1);    /* Aumenta o tamanho dos ícones ao passar o mouse */
+}
+
+/* Estilo para o botão de login */
+.login-button button {
+    padding: 10px 20px;       /* Espaciamento dentro do botão */
+    font-size: 16px;          /* Tamanho da fonte */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;             /* Cor do texto */
+    border: none;             /* Remover borda */
+    border-radius: 5px;       /* Bordas arredondadas */
+    cursor: pointer;          /* Cursor em forma de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave para a cor */
+}
+
+.login-button button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}

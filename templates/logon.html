@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html lang=”pt-BR”>
+<html lang="pt-BR">
 <head>
- <meta charset=”UTF-8”>
- <title>Suas informações</title>
- <link rel=”stylesheet” href=”../static/logonstyle.css”>
+    <meta charset="UTF-8">
+    <title>Suas informações</title>
+    <link rel="stylesheet" href="../static/logonstyle.css">
 </head>
 <body>
- <div class =”mae”>
- <div class=”container”>
- <a href=”/” id = “sairBotao”class=”button-link”>Sair</a>
- </div>
- <div class=”container mt-4”>
- <h1>Bem-vindo, {{ nome_usuario }}!</h1>
- <p>Escolha uma das opções abaixo para continuar:</p>
- </div>
- <div class=”pai”>
- <div class=”info”>
- <a href=”/consultarinformacao” method=”post” class=”buttonlink”>Consultar Informações</a>
- <br>
- <br>
- <a href=”/visualizarinfo” class=”button-link”>Visualize seus dados e
-informações registradas.</a>
- </div>
- </div>
- <div class=”historico”>
- <a href=”/historicoconsultas” method=”post” class=”text-decorationnone”>
- <a href=”/consultarecente” method=”post” class=”button-link”>Veja sua
-consulta mais recente</p>
- <a href=”/”class=”button-link”>Historico de Consultas </a>
- </div>
- <div class=”agendar”>
-  <a href=”/agendamento” method=”post” class=”text-decoration-none”>
-  <a href=”/” class=”button-link”>Agendar Nova Consulta</a>
- </div>
- </div>
- <script src=”js/logonscript.js”> </script>
+    <div class="mae">
+        <div class="container">
+            <a href="/" id="sairBotao" class="button-link">Sair</a>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo, {{ nome_usuario }}!</h1>
+            <p>Escolha uma das opções abaixo para continuar:</p>
+        </div>
+        <div class="pai">
+            <div class="info">
+                <a href="/consultarinformacao" class="button-link">Consultar Informações</a>
+                <br><br>
+                <a href="/visualizarinfo" class="button-link">Visualize seus dados e informações registradas.</a>
+            </div>
+        </div>
+        <div class="historico">
+            <a href="/historicoconsultas" class="button-link">Histórico de Consultas</a>
+            <br><br>
+            <a href="/consultarecente" class="button-link">Veja sua consulta mais recente</a>
+        </div>
+        <div class="agendar">
+            <a href="/agendamento" class="button-link">Agendar Nova Consulta</a>
+        </div>
+    </div>
+    <script src="js/logonscript.js"></script>
+    <footer>
+        <p>Evellyn e Vitória – 2024</p>
+    </footer>
 </body>
-
- <footer>
- <p>Evellyn e Vitória – 2024</p>
- </footer>
- </html>
+</html>

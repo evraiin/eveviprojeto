@@ -3,12 +3,11 @@ import psycopg2
 def conectardb():
     con = psycopg2.connect(
         host='localhost',
-        database='clinicavet',
+        database='hospif',
         user='postgres',
         password='12345'
     )
     return con
-
 
 def inserirusuario(nome, email, senha):
     conexao = conectardb()
@@ -26,6 +25,7 @@ def inserirusuario(nome, email, senha):
 
     conexao.close()
     return exito
+
 
 
 def verificarlogin(email, senha):
@@ -61,15 +61,19 @@ def inserir_agendamento(nome, telefone, email, dia_consulta, nome_pet, especie, 
     return exito
 
 
-def get_usuario_por_nome(connection, nome_usuario):
-    try:
-        cursor = connection.cursor(dictionary=True)
-        query = "SELECT * FROM usuario WHERE nome_usuario = %s"
-        cursor.execute(query, (nome_usuario,))
-        resultado = cursor.fetchone()  # Obtém um único registro
-        return resultado
-    except mysql.connector.Error as err:
-        print(f"Erro ao acessar o banco de dados: {err}")
-        return None
-    finally:
-        cursor.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

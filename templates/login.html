@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>login</title>
+     <link rel="stylesheet" href="../static/loginstyle.css">
+   </head>
+
+   <body>
+
+    <div class="container">
+
+
+     <header>
+
+        <div class="logo">
+         HV-ASA - IFPB
+        <img src="../static/imagens/logoq.jpg">
+        </div>
+
+     </header>
+
+<main>
+        <div class="cont">
+        <div class="informacoes">
+            <form action="/login" method="post">
+            <a><b>Login</b></a>
+            <label>E-mail:</label><input type="email" name="email" placeholder="Ex: seuemail@gmail.com" required>
+            <br>
+            <label>Senha:</label><input type="password"  name="senha" placeholder="Sua senha" required>
+            <br>
+            <button onclick="entrar()" type="submit"> Entrar </button>
+            <br>
+            <a href="{{ url_for('login') }}" class="login-button">
+    <button type="button">Login</button>
+            </a>
+            </form>
+        </div>
+
+
+
+</main>
+
+   </div>
+
+     <script src="js/iscript.js"> </script>
+
+   </body>
+</html>

@@ -3,18 +3,19 @@
    <head>
       <meta charset="UTF-8">
       <title>IFPB</title>
-     <link rel="stylesheet" href="../static/indexstyle.css">
+     <link rel="stylesheet" href="../static/istyle.css">
    </head>
 
    <body>
 
     <div class="container">
 
+
      <header>
 
         <div class="logo">
 
-           HV-ASA - IFPB
+            HV-ASA - IFPB
 
         </div>
 
@@ -33,13 +34,14 @@
 
         <div class="cont">
             <img src="../static/imagens/VETERINARIO.jpg">
-            <p clas="texto"> O Hopistal veterinário Adílio Santos de Azevedo (HV ASA) é uma unidade de apoio às atividades de ensino, pesquisa e extensão do Curso de Graduação em Medicina Veterinária do Instituto Federal de Ciência e Tecnologia da Paraíba (IFPB Campus Sousa).Tem como objetivo auxiliar a formação profissional, garantindo ensino de qualidade para estudantes de graduação e pós-graduação, através do treinamento na rotina hospitalar. Adicionalmente, presta serviços gratuitos a população do município de Sousa e cidades circunvizinhas aasim são realizadas, sempre que solicitadas, atividades externas como visitas às propriedades rurais, por exemplo. Os principais projetos de extensão incluem campanhas de castrações ou controle populacional, posse responsável, bem-estar e sanidade animal . O HV ASA dispõe de cinco médicos veterinários que atuam nas áreas de clínica médica de grandes, clínica médica de pequenos, clínica cirúrgica de pequenos e patologia animal, além de 4 técnicos agropecuários que auxiliam na rotina dos laboratórios de suporte diagnóstico. Adicionalmente, recebe colaboração de 8 professores de diferentes áreas da medicina veterinária, que contribuem com a rotina hospitalar através do desenvolvimento de aulas práticas e voluntariamente com plantões que variam de 6 a 12 horas por semana, por profissional.</p>
+
+            <p class="texto"> O Hopistal veterinário Adílio Santos de Azevedo (HV ASA) é uma unidade de apoio às atividades de ensino, pesquisa e extensão do Curso de Graduação em Medicina Veterinária do Instituto Federal de Ciência e Tecnologia da Paraíba (IFPB Campus Sousa).Tem como objetivo auxiliar a formação profissional, garantindo ensino de qualidade para estudantes de graduação e pós-graduação, através do treinamento na rotina hospitalar. Adicionalmente, presta serviços gratuitos a população do município de Sousa e cidades circunvizinhas aasim são realizadas, sempre que solicitadas, atividades externas como visitas às propriedades rurais, por exemplo. Os principais projetos de extensão incluem campanhas de castrações ou controle populacional, posse responsável, bem-estar e sanidade animal . O HV ASA dispõe de cinco médicos veterinários que atuam nas áreas de clínica médica de grandes, clínica médica de pequenos, clínica cirúrgica de pequenos e patologia animal, além de 4 técnicos agropecuários que auxiliam na rotina dos laboratórios de suporte diagnóstico. Adicionalmente, recebe colaboração de 8 professores de diferentes áreas da medicina veterinária, que contribuem com a rotina hospitalar através do desenvolvimento de aulas práticas e voluntariamente com plantões que variam de 6 a 12 horas por semana, por profissional.</p>
         </div>
 
         <div class="informacoes">
             <form action="/login" method="post">
             <a><b>Login</b></a>
-            <label>E-mail:</label><input type="email" name="email"placeholder="seuemail@exemplo.com" required>
+            <label>E-mail:</label><input type="email" name="email">
             <br>
             <label>Senha:</label><input type="password"  name="senhalogin" placeholder="sua senha" required>
             <br>
@@ -47,16 +49,16 @@
             <br>
             </form>
 
-            <form action="/cadastro" method="post">
-            <a><b>Cadastro:</b></a>
-            <label>Nome:</label><input type="text" name="nome" placeholder="Seu nome completo" required>
-            <br>
-            <label>login:</label><input type="text" name="email" placeholder="seuemail@exemplo.com" required>
-            <br>
-            <label>Senha:</label><input type="password" id="senha" name="senha" placeholder="sua senha" required>
-            <br>
-            <button onclick="entrar()" type="submit"> Cadastrar </button>
-            <p id="mensagem">{{mensagem}} </p>
+            <form id="form" action="/cadastro" method="post">
+              <a><b>Cadastro:</b></a>
+              <label>Nome:</label><input type="text" name="nome" placeholder="Seu nome completo" required>
+              <br>
+              <label>Email:</label><input type="text" name="email">
+              <br>
+              <label>Senha:</label><input type="password" id="senha" name="senha" placeholder="sua senha" required>
+              <br>
+              <button onclick="entrar()" type="submit"> Cadastrar </button>
+              <p id="mensagem">{{mensagem}} </p>
 
             </form>
 
@@ -71,7 +73,7 @@
 
    </div>
 
-     <script src="js/indexscript.js"> </script>
+     <script src="js/iscript.js"> </script>
 
    </body>
 </html>

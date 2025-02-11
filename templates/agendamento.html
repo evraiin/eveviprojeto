@@ -1,66 +1,65 @@
 <!DOCTYPE html>
-<html lang=”pt-BR”>
+<html lang="pt-BR">
 <head>
-    <meta charset=”UTF-8”>
+    <meta charset="UTF-8">
     <title>Agendamento de Consulta Veterinária</title>
-     <link rel="stylesheet" href="../static/agendamentostyle.css">
+    <link rel="stylesheet" href="../static/agendamentostyle.css">
 </head>
 <body>
- <header>
-        <h1> Agendamento de Consulta</h1>
+    <header>
+        <h1>Agendamento de Consulta</h1>
         <p>Escolha os detalhes para o atendimento do seu pet.</p>
- </header>
-     <div class=”form-group”>
+    </header>
+    <div class="form-group">
         <h2>Detalhes da Consulta</h2>
         <p>Preencha os dados abaixo para continuar o agendamento.</p>
-      </div>
-        <div class=”form-group”>
-          <div class = “formulario_agendamento”>
-    <form action=”/agendamento” method="post">
-            <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-             <br>
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
-             <br>
-            <label for=”email”>E-mail</label>
-            <input type="email" id=”email” name=”email” placeholder=seuemail@exemplo.com required>
-             <br>
-           <label for="labeldia">Dia da consulta</label>
-
-            <select id="diaconsulta" name="diaconsulta" required> 
-     <option value="">Selecione</option>
-           <option value="06 janeiro">seg, 6 de janeiro</option> 
-         <option value="07 de janeiro ">ter, 7 de janeiro </option> 
-       <option value="08 de janeiro">qua, 8 de janeiro </option> 
-           <option value="09 janeiro">qui, 9 de janeiro</option>
-            <option value="1 janeiro">sex, 10 de janeiro</option>
-            </select>
-             <br>
-            <label for=”nome-pet”>Nome do Pet</label>
-            <input type="text" id=”nome-pet” name=”nome-pet” placeholder="Nome do seu pet" required>
-             <br>
-            <label for=”especie”>Espécie do Pet</label>
-            <select id=”especie” name=”especie” required>
-                <option value=””>Selecione</option>
-                <option value=”cachorro”>Cachorro</option>
-                <option value=”gato”>Gato</option>
-                <option value=”animal silvestre”>Animal silvestre</option>
-            </select>
-             <br>
-            <label for=”motivo”>Motivo da Consulta</label>
-            <textarea id=”motivo” name=”motivo” placeholder="Descreva o motivo da consulta" required></textarea>
-            <button type="button" class="btn btn-secondary">Voltar</button>
-            <button type="submit" class="btn btn-primary">Agendar</button>
-        </div>
-      </div>
-      </form>
     </div>
-
+    <div class="form-group">
+        <div class="formulario_agendamento">
+            <form action="/agendamento" method="post">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                <br>
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                <br>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                <br>
+                <label for="diaconsulta">Dia da consulta</label>
+                <select id="diaconsulta" name="diaconsulta" required>
+                    <option value="">Selecione</option>
+                    <option value="06 janeiro">Seg, 6 de janeiro</option>
+                    <option value="07 de janeiro">Ter, 7 de janeiro</option>
+                    <option value="08 de janeiro">Qua, 8 de janeiro</option>
+                    <option value="09 janeiro">Qui, 9 de janeiro</option>
+                    <option value="10 janeiro">Sex, 10 de janeiro</option>
+                </select>
+                <br>
+                <label for="nome-pet">Nome do Pet</label>
+                <input type="text" id="nome-pet" name="nome-pet" placeholder="Nome do seu pet" required>
+                <br>
+                <label for="especie">Espécie do Pet</label>
+                <select id="especie" name="especie" required>
+                    <option value="">Selecione</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="animal silvestre">Animal silvestre</option>
+                </select>
+                <br>
+                <label for="motivo">Motivo da Consulta</label>
+                <textarea id="motivo" name="motivo" placeholder="Descreva o motivo da consulta" required></textarea>
+                <br>
+                <button type="button" class="btn btn-secondary">Voltar</button>
+                <button type="submit" class="btn btn-primary">Agendar</button>
+            </form>
+        </div>
+    </div>
     <footer>
         <p>© 2024 Consulta Online.</p>
     </footer>
-    <script src=”js/agendamentoscript.js”> </script>
- </body>
+    <script src="js/agendamentoscript.js"></script>
+</body>
 </html>
+
 
