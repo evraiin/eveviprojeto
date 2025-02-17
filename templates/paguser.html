@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário</title>
+     <link rel="stylesheet" href="../static/paguserstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo, {{ usuario_nome }}!</h1>
+        <nav>
+            <a href="{{ url_for('cadastrar_animal') }}">Novo Animal</a>
+            <a href="{{ url_for('listar_animais') }}">Meus Animais</a>
+            <a href="{{ url_for('agendar_consulta') }}">Agendar Consulta</a>
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h2>Novo Paciente</h2>
+                <a href="{{ url_for('cadastrar_animal') }}">Cadastrar Animal</a>
+            </div>
+            <div class="card">
+                <h2>Meus Animais</h2>
+                <a href="{{ url_for('listar_animais') }}">Ver Lista</a>
+            </div>
+            <div class="card">
+                <h2>Agendar Consulta</h2>
+                <a href="{{ url_for('agendar_consulta') }}">Agendar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

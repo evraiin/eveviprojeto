@@ -20,7 +20,7 @@
 
      </header>
 
-<main>
+
         <div class="cont">
         <div class="informacoes">
             <form action="/login" method="post">
@@ -31,19 +31,17 @@
             <br>
             <button onclick="entrar()" type="submit"> Entrar </button>
             <br>
-            <a href="{{ url_for('login') }}" class="login-button">
-    <button type="button">Login</button>
-            </a>
+            <p>Ainda não é cadastrado?<a href="/cadastro">  Clique aqui </a></p>
             </form>
+
+            <p class="mensagem">{{mensagem}} </p>
+
         </div>
 
 
 
-</main>
 
    </div>
-
-     <script src="js/iscript.js"> </script>
-
+        <script src="js/iscript.js"> </script>
    </body>
 </html>

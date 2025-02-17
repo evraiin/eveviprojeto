@@ -28,7 +28,7 @@ def inserirusuario():
         msg = 'Usuário cadastrado com sucesso'
     else:
         msg = 'Problemas ao inserir usuário'
-    return render_template('index.html', mensagem=msg)
+    return render_template('login.html', mensagem=msg)
 
 @app.route('/login', methods={'POST'})
 def login():
@@ -38,12 +38,12 @@ def login():
     resultado = dao.verificarlogin(email, senha)
 
     if len(resultado) > 0:
-        session['login'] = resultado[0][3]
+        session['login'] = resultado[0]
 
         return render_template('logon.html', usuario=resultado[0])
     else:
         msg = 'Usuario ou senha incorretos'
-        return render_template('login.html', msglogin=msg)
+        return render_template('login.html',  mensagem=msg)
 
 
 @app.route('/cadastre', methods={'POST'})
