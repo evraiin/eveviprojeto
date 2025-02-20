@@ -8,7 +8,7 @@
 <body>
     <div class="mae">
         <div class="container">
-            <a href="/" id="sairBotao" class="button-link">Sair</a>
+            <a href="{{ url_for('logout') }}" id="logoutButton" class="btn-custom">Sair</a>
         </div>
         <div class="container mt-4">
             <h1>Bem-vindo, {{ nome_usuario }}!</h1>
@@ -27,7 +27,8 @@
             <a href="/consultarecente" class="button-link">Veja sua consulta mais recente</a>
         </div>
         <div class="agendar">
-            <a href="/agendamento" class="button-link">Agendar Nova Consulta</a>
+
+            <a href="/agendar" class="button-link">Agendar Nova Consulta</a>
         </div>
     </div>
     <script src="js/logonscript.js"></script>

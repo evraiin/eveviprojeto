@@ -10,3 +10,16 @@ Document.addEventListener(“DOMContentLoaded”, function() {
  }
  });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+        var logoutButton = document.getElementById("logoutButton");
+
+        if (logoutButton) {
+            logoutButton.addEventListener("click", function (event) {
+                var confirmLogout = confirm("Você tem certeza que deseja sair?");
+                if (!confirmLogout) {
+                    event.preventDefault(); // Cancela o redirecionamento se o usuário clicar em "Cancelar"
+                }
+            });
+        }
+    });

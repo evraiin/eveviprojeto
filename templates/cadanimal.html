@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Cadastro de Animais</title>
+      <link rel="stylesheet" href="../static/cadanistyle.css">
+   </head>
+
+   <body>
+
+    <div class="container">
+
+     <header>
+        <div class="logo">
+          HV-ASA - IFPB
+          <img src="../static/imagens/nlogo.jpg">
+        </div>
+     </header>
+
+        <div class="informacoes">
+            <form id="form" action="/cadastro_animal" method="post">
+              <a><b>Cadastro de Animais:</b></a>
+              <br><br>
+              <label>Nome do Animal:</label>
+              <input type="text" name="nome" placeholder="Ex: Frajolinha" required>
+              <br>
+              <label>Espécie:</label>
+              <input type="text" name="especie" placeholder="Ex: Gato" required>
+              <br>
+              <label>Raça:</label>
+              <input type="text" name="raca" placeholder="Ex: Persa" required>
+              <br>
+              <label>Idade (anos):</label>
+              <input type="number" name="idade" min="0" placeholder="Ex: 5" required>
+              <br>
+              <label>Peso (kg):</label>
+              <input type="number" name="peso" step="0.1" min="0" placeholder="Ex: 4,5" required>
+              <br>
+              <button onclick="entrar()" type="submit"> Cadastrar </button>
+              <p id="mensagem">{{mensagem}}</p>
+            </form>
+        </div>
+
+   </div>
+
+     <script src="../static/js/iscript.js"></script>
+
+   </body>
+</html>

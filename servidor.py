@@ -46,9 +46,44 @@ def login():
         return render_template('login.html',  mensagem=msg)
 
 
+
+@app.route('/agendar', methods=['POST','GET'])
+def agendar():
+
+    if request.method == 'GET' and 'login' in session:
+        return render_template('agendamento.html')
+
+    if 'login' not in session:
+        return redirect('/logon')
+
+
+    nome = request.form.get('nome')
+    diaconsulta = request.form.get('diaconsulta')
+    motivo = request.form.get('motivo')
+    email = session['login']
+    print(nome, diaconsulta, motivo,email)
+
+    if dao.inserir_agendamento(nome, diaconsulta, motivo,email):
+        msgAgendar = 'Agendamento realizado com sucesso!'
+        return redirect('/')
+    else:
+
+        msgAgendar = 'Ops! Erro ao realizar agendamento, tente novamente.'
+        return render_template('agendamento.html', mensagem=msgAgendar)
+
+
+
+
+
 @app.route('/cadastre', methods={'POST'})
 def mostrar_page_login():
     return render_template('cadastro.html')
+
+
+@app.route('/logout')
+def logout():
+    session.pop('login', None)
+    return redirect(url_for('pageprincipal'))
 
 
 

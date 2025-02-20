@@ -39,26 +39,22 @@ def verificarlogin(email, senha):
     return recset
 
 
-def inserir_agendamento(nome, telefone, email, dia_consulta, nome_pet, especie, motivo, conexao):
-    exito = False
+
+def inserir_agendamento(nome, diaconsulta, motivo, email):
+    print(nome, diaconsulta, motivo, email)
     try:
-        sql = """
-            INSERT INTO agendamento (nome, telefone, email, nome_pet, especie, motivo) 
-            VALUES (%s, %s, %s, %s, %s, %s)
-        """
+        conexao = conectardb()
         cur = conexao.cursor()
-        cur.execute(sql, (nome, telefone, email, nome_pet, especie, motivo))
-    except psycopg2.Error as err:
-        print(f"Erro ao executar a consulta: {err}")
-        conexao.rollback()
-        exito = False
+        sql = f"INSERT INTO agendamentos (nome, diaconsulta, motivo, email) VALUES ('{nome}', '{diaconsulta}', '{motivo}', '{email}')"
+        cur.execute(sql)
+    except Exception as e:
+        print(e)
+        return False
     else:
         conexao.commit()
-        exito = True
-    finally:
-        cur.close()
         conexao.close()
-    return exito
+        return True
+
 
 
 
