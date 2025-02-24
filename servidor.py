@@ -16,6 +16,9 @@ def pagina_login():
 def pagina_cad():
     return render_template('cadastro.html')
 
+@app.route('/voltar')
+def pagiuser():
+    return render_template('pagiuser.html')
 
 
 @app.route('/cadastro', methods=['POST'])
@@ -40,11 +43,30 @@ def login():
     if len(resultado) > 0:
         session['login'] = resultado[0]
 
-        return render_template('logon.html', usuario=resultado[0])
+        return render_template('pagiuser.html', usuario=resultado[0])
     else:
         msg = 'Usuario ou senha incorretos'
         return render_template('login.html',  mensagem=msg)
 
+@app.route('/cadastroanimal', methods=['POST','GET'])
+def inseriranimal():
+    if request.method == 'GET':
+        return render_template('cadanimal.html')
+
+    nome = request.form.get('nome')
+    especie = request.form.get('especie')
+    raca = request.form.get('raca')
+    idade = request.form.get('idade')
+    sexo = request.form.get('sexo')
+    peso = request.form.get('peso')
+
+    if dao.inseriranimal(nome, especie, raca, idade, sexo, peso):
+        msg = 'animal cadastrado com sucesso'
+    else:
+        msg = 'Problemas ao inserir animal'
+
+
+    return render_template('cadanimal.html', mensagem=msg)
 
 
 @app.route('/agendar', methods=['POST','GET'])
@@ -70,6 +92,13 @@ def agendar():
 
         msgAgendar = 'Ops! Erro ao realizar agendamento, tente novamente.'
         return render_template('agendamento.html', mensagem=msgAgendar)
+
+
+@app.route('/listaruser')
+def listar_users():
+    usuarios = dao.listar_user()
+    return render_template('listauser.html', lista=usuarios)
+
 
 
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Usuário</title>
+
+   <link rel="stylesheet" href="../static/pagustyle.css">
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Bem-vindo!</h1>
+
+    </header>
+
+    <section class="user-info">
+
+        <div class="info-box">
+
+            <p><i class="fas fa-paw"></i> Você tem <strong>{{ total_pets }}</strong> pets cadastrados.</p>
+
+            <p><i class="fas fa-calendar-alt"></i> Próxima consulta: <strong>{{ proxima_consulta }}</strong></p>
+
+            <p><i class="fas fa-clock"></i> Último acesso: <strong>{{ ultimo_acesso }}</strong></p>
+
+        </div>
+
+
+
+            <a href="{{ url_for('logout') }}" class="btn logout-btn">
+
+                <i class="fas fa-sign-out-alt"></i> Sair
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="notifications">
+
+        <h2>Notificações</h2>
+
+        <ul>
+
+            <li><i class="fas fa-check-circle"></i> Consulta confirmada para dia 20/02/2025.</li>
+
+            <li><i class="fas fa-exclamation-triangle"></i> Vacina do Rex em atraso!</li>
+
+        </ul>
+
+    </section>
+
+    <main>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fas fa-plus-circle"></i>
+
+                <h2>Lista de usuarios</h2>
+
+               <a href="/listaruser" class="button-link">Visualize usuarios no sistema</a>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-paw"></i>
+
+                <h2>Cadastre Animais</h2>
+
+               <a href="/cadastroanimal" class="button-link">Cadastrar Pet</a>
+
+            </div>
+
+
+             <div class="card">
+
+                <i class="fas fa-calendar-alt"></i>
+
+                <h2>Agendar Consulta</h2>
+
+                <a href="/agendar" class="button-link">Agendar consulta</a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2025 - Prontuário Eletrônico Veterinário</p>
+
+        <p>Desenvolvido por Vitoria Kevanny e Evellyn</p>
+
+    </footer>
+
+</body>
+
+</html>
